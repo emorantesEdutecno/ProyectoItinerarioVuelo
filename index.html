@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/BootstrapV5/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Aerolinea</title>
+</head>
+<body onload="asignarEventos()">
+    <header>
+        <!--NAVEGADOR-->
+        <nav class="navbar navbar bg-black" id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">FlyNow</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">Chat</a>
+                  <a class="nav-link" href="#">Preguntas Frecuentes</a>
+                  <a class="nav-link" href="#">Manuales y Tutoriales</a>
+                  <a class="nav-link" href="#">Noticias</a>
+                  <a class="nav-link" href="#">Calendario</a>
+                  <a class="nav-link" href="#">Organigrama</a>
+                  <a class="nav-link disabled">Administración </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <!--END NAV-->
+    <!--CUERPO-->
+    <main>
+        <div>
+            <h1>¿Donde quieres ir?</h1>
+            <p class="textoPrimero">Estás a sólo unos pasos de estar en destino de tus sueños para tus</p>
+            <p class="textoPrimero">vacaciones. A continuación cuéntanos adonde quieres ir</p>
+        </div>
+            <!--FLEX CONTAINER 1-->
+            <div class="flex-container">
+                <div>
+                    <p class="textoSegundo">Origen:</p>
+                </div>
+                <div>
+                    <p class="textoSegundo">Destino:</p>
+                </div>
+            </div>
+             <!--FLEX CONTAINER 2-->
+            <div class="flex-container">
+                    <div>
+                        <select id="listaOrigen" class="form-select" >
+                            <option selected value="0">New York, USA</option>
+                            <option value="1">Chile</option>
+                            <option value="2">México</option>
+                            <option value="3">Colombia</option>
+                            <option value="4">Perú</option>
+                            <option value="5">España</option>
+                            <option value="6">Venezuela</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <select id="listaDestino" class="form-select">
+                            <option selected value="0">New York, USA</option>
+                            <option value="1">Chile</option>
+                            <option value="2">México</option>
+                            <option value="3">Colombia</option>
+                            <option value="4">Perú</option>
+                            <option value="5">España</option>
+                            <option value="6">Venezuela</option>
+                        </select>
+                    </div>
+              </div>  
+             <!--FLEX CONTAINER 3-->
+             <div class="flex-container">
+                <div>
+                    <input id="fechaOrigen" type="date" required>
+                </div>
+                <div>
+                    <input id="fechaDestino" type="date" required>
+                </div>
+            </div>
+        
+    </main>
+
+    <section>
+        <h1>Itinerario</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 bg-primary">
+                    <h2 class="text-center text-warning">Origen</h2>
+                    <p id="parrafoOrigen"></p>
+                    <p id="parrafoFechaOrigen"></p>
+                </div>
+                <div class="col-md-4 bg-secondary">
+                    <p id="parrafoNotificacion"></p>
+                </div>
+                <div class="col-md-4 bg-info">
+                    <h2 class="text-center text-danger">Destino</h2>
+                    <p id="parrafoDestino"></p>
+                    <p id="parrafoFechaDestino"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
